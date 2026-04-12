@@ -1,0 +1,15 @@
+uv run -m consumers.ohlcv_consumer &
+uv run -m consumers.validation_consumer &
+uv run -m consumers.context_consumer &
+uv run -m consumers.enrichment_consumer &
+uv run -m consumers.anomaly_consumer &
+uv run -m consumers.impact_consumer &
+uv run -m consumers.sink_consumer &
+
+uv run -m producers.price_producer &
+uv run -m producers.fred_producer &
+uv run -m producers.weather_producer &
+uv run -m producers.news_producer &
+uv run -m producers.shipment_producer &
+
+uv run uvicorn api.main:app --reload --port 8000

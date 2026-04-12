@@ -1,0 +1,16 @@
+[project]
+name = "energy-stream-pipeline"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "confluent-kafka",
+    "fastapi>=0.135.3",
+    "numpy>=2.4.4",
+    "psycopg2-binary>=2.9.11",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.2",
+    "redis>=7.4.0",
+    "requests>=2.33.1",
+    "uvicorn>=0.43.0",
+    "yfinance>=1.2.0",
+]
